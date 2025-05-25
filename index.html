@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Shreya Singh | Portfolio</title>
+  <link rel="icon" href="profile.jpg" type="image/jpeg" />
   <style>
     :root {
       --primary: #4f46e5;
@@ -22,6 +23,22 @@
       background-color: var(--background);
       color: var(--text);
       line-height: 1.6;
+    }
+    body.dark {
+      --background: #111827;
+      --text: #f9fafb;
+      --card-bg: #1f2937;
+    }
+    .toggle-mode {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--card-bg);
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      cursor: pointer;
     }
     header {
       background: linear-gradient(to right, #4f46e5, #6366f1);
@@ -100,7 +117,14 @@
     a:hover {
       text-decoration: underline;
     }
-
+    .stats {
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .stats img {
+      max-width: 100%;
+      margin-bottom: 1rem;
+    }
     @media (max-width: 768px) {
       header h1 {
         font-size: 2rem;
@@ -119,7 +143,6 @@
         height: 120px;
       }
     }
-
     @media (max-width: 480px) {
       header h1 {
         font-size: 1.5rem;
@@ -138,6 +161,7 @@
   </style>
 </head>
 <body>
+  <button class="toggle-mode" onclick="document.body.classList.toggle('dark')">Toggle Dark Mode</button>
   <header>
     <img src="profile.jpg" alt="Shreya Singh Photo" class="profile-pic" />
     <h1>Shreya Singh</h1>
@@ -192,6 +216,13 @@
       <li>Version Control Certificate</li>
       <li>Front-End Programming Certificate</li>
     </ul>
+  </div>
+
+  <div class="section stats">
+    <h2>GitHub Stats</h2>
+    <img src="https://github-readme-stats.vercel.app/api?username=Shreya-AI65&show_icons=true&theme=default" alt="GitHub Stats" />
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=Shreya-AI65&theme=default" alt="GitHub Streak" />
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Shreya-AI65&layout=compact" alt="Top Languages" />
   </div>
 
   <footer>
